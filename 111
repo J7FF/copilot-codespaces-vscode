@@ -1,0 +1,42 @@
+graph TD
+  A[研究目标] --> B[数据采集与参数标定]
+  B --> C[地形特征建模]
+  C --> D{地形类型}
+  D --> D1[水平地形]
+  D --> D2[倾斜地形]
+  D --> D3[凹坡地形]
+  D --> D4[凸坡地形]
+  
+  C --> E[开采沉陷模拟]
+  E --> F[沉陷范围分析]
+  F --> G[地表位移场]
+  F --> H[裂隙发育特征]
+  
+  B --> I[地层参数化]
+  I --> J[岩性组合]
+  I --> K[地层厚度]
+  I --> L[地层倾角]
+  
+  J --> M[耦合模型构建]
+  K --> M
+  L --> M
+  D1 --> M
+  D2 --> M
+  D3 --> M
+  D4 --> M
+  
+  M --> N[正交试验设计]
+  N --> O[应力场演化]
+  O --> P[敏感性分析]
+  P --> Q[权重系数矩阵]
+  
+  Q --> R[沉陷机制解析]
+  R --> S[预测模型构建]
+  S --> T[工程优化设计]
+  
+  style A fill:#FFD700,stroke:#333
+  style B fill:#87CEEB,stroke:#333
+  style C fill#87CEEB,stroke:#333
+  style M fill#FFA07A,stroke:#333
+  style R fill#98FB98,stroke:#333
+  style T fill#FF6347,stroke:#333
